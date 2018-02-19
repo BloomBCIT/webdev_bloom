@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import Details from '../comp/Details';
+import Chat from '../comp/Chat';
 
 class Products extends Component {
     constructor(props){
@@ -18,6 +19,7 @@ class Products extends Component {
         this.accountPage = this.accountPage.bind(this);
         this.searchPage = this.searchPage.bind(this);
         this.showingDetails = this.showingDetails.bind(this);
+        this.showingChat = this.showingChat.bind(this);
     }
     
     homePage(){
@@ -63,6 +65,11 @@ class Products extends Component {
         });
     }
     
+    showingChat(){
+        this.setState({
+            clicked: !this.state.clicked
+    });
+    }
     
     
   render() {
@@ -152,8 +159,20 @@ class Products extends Component {
                              
                     </div>
                 </div>
+                        
+                {this.state.clicked ?
+                            <Chat   
+                                    closePopup={this.showingChat.bind(this)}
+                                        />
+                                        : null
+                            }
+                            
+                             <button className="chatBut" onClick={this.showingChat.bind(this)}>Chat</button>
+        
             
             </div>
+        
+            
         
     );
   }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
+import Chat from '../comp/Chat';
 
 
 
@@ -8,6 +9,7 @@ class Checkout extends Component {
         super(props);
         
         this.state={
+            clicked:false
 
         };
         
@@ -18,6 +20,7 @@ class Checkout extends Component {
         this.checkOut = this.checkOut.bind(this);
         this.accountPage = this.accountPage.bind(this);
         this.searchPage = this.searchPage.bind(this);
+       this.showingChat = this.showingChat.bind(this);
     }
     
     homePage(){
@@ -59,6 +62,12 @@ class Checkout extends Component {
         
         var page = "Search";
         this.props.changePage(page);
+    }
+    
+    showingChat(){
+        this.setState({
+            clicked: !this.state.clicked
+    });
     }
     
     
@@ -107,9 +116,20 @@ class Checkout extends Component {
                 <div className="checkoutP">Sorry, this page is under construction
                 </div>
             </div>
+             {this.state.clicked ?
+                            <Chat   
+                                    closePopup={this.showingChat.bind(this)}
+                                        />
+                                        : null
+                            }
+                            
+                             <button className="chatBut" onClick={this.showingChat.bind(this)}>Chat</button>
+        
         
             </div>
         
+           
+       
     );
   }
 }

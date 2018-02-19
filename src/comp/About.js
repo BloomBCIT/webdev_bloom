@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import '../App.css';
 import Map from './maps/Map';
+import Chat from '../comp/Chat';
 
 class About extends Component {
     constructor(props){
         super(props);
         
         this.state={
-
+            clicked:false
         };
         
         this.homePage = this.homePage.bind(this);
@@ -16,6 +17,7 @@ class About extends Component {
         this.orderPage = this.orderPage.bind(this);
         this.accountPage = this.accountPage.bind(this);
         this.searchPage = this.searchPage.bind(this);
+        this.showingChat = this.showingChat.bind(this);
     }
     
     homePage(){
@@ -52,6 +54,12 @@ class About extends Component {
         
         var page = "Search";
         this.props.changePage(page);
+    }
+    
+    showingChat(){
+        this.setState({
+            clicked: !this.state.clicked
+    });
     }
     
   render() {
@@ -120,7 +128,20 @@ class About extends Component {
                     mapElement={<div style={{ height: `100%` }} />}
                 />
             </div>
+        
+            {this.state.clicked ?
+                                <Chat   
+                                        closePopup={this.showingChat.bind(this)}
+                                            />
+                                            : null
+                                }
+
+                                 <button className="chatBut" onClick={this.showingChat.bind(this)}>Chat</button>
         </div>
+        
+        
+        
+      
         
     );
   }

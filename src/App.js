@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Landing from './comp/Landing';
+import Chat from './comp/Chat';
 import Products from './comp/Products';
 import Orders from './comp/Orders';
 import About from './comp/About';
@@ -49,6 +50,9 @@ class App extends Component {
       
       }else if(this.state.page == "Search"){
           comp = <Search changePage = {this.changePage} />
+      
+      }else if(this.state.page == "Chat"){
+          comp = <Chat changePage = {this.changePage} />
       
       }
     return (

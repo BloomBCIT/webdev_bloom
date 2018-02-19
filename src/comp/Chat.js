@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import mySocket from 'socket.io-client';
 import '../App.css';
-import * as Scroll from 'react-scroll';
+
 
 
 class Chat extends Component {
@@ -36,8 +36,7 @@ class Chat extends Component {
             mode:1
         })
         
-        this.socket = mySocket("https://webdev4bloom-socket.herokuapp.com/
-");
+        this.socket = mySocket("https://webdev4bloom-socket.herokuapp.com/");
         this.socket.emit("username", this.state.username);
        
         this.socket.on("usersjoined", (data)=>{
