@@ -114,7 +114,7 @@ class About extends Component {
                 <h4>Our Location</h4>
                 <Map
                     isMarkerShown
-                    googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+                    googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyA62pMoGW2dar_GKz8hwFNIlLhp08r58E8&v=3.exp&libraries=geometry,drawing,places"
                     loadingElement={<div style={{ height: `100%` }} />}
                     containerElement={<div style={{ height: `400px`, width: '50%', margin: 'auto' }} />}
                     mapElement={<div style={{ height: `100%` }} />}
