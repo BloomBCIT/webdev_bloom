@@ -110,7 +110,7 @@ body{
 .chatBut{
     font-size: 1em;
     color:antiquewhite;
-    position: sticky;
+    position: absolute;
     bottom:5%;
     right:5%;
     height:60px;

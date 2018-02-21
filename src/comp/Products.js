@@ -122,15 +122,14 @@ class Products extends Component {
                         <div className="productImg1">
                         </div>
                         <div className="productDetails1">
-                                Product1
+                            Chrysanthemum flower tea
                         </div>
                         <div className="productPrice1">
-                            Price:
+                            Price: $50.00
                         </div>
                     {this.state.clicked ?
                             <Details   
-                                    closePopup={this.showingDetails.bind(this)}
-                                        />
+                                    closePopup={this.showingDetails.bind(this)}/>
                                         : null
                             }
                             
@@ -140,10 +139,10 @@ class Products extends Component {
                         <div className="productImg2">
                         </div>
                         <div className="productDetails2">
-                                Product2
+                                Cockscomb flower tea
                         </div>
                         <div className="productPrice1">
-                            Price:
+                            Price: $50.00
                         </div>
     
                     </div>
@@ -151,10 +150,10 @@ class Products extends Component {
                         <div className="productImg3">
                         </div>
                         <div className="productDetails3">
-                                Product3
+                            Safflower flower tea
                         </div>
                         <div className="productPrice1">
-                            Price:
+                            Price: $50.00
                         </div>
                              
                     </div>
