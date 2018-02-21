@@ -8,7 +8,8 @@ class Products extends Component {
         super(props);
         
         this.state={
-            clicked:false
+            clicked:false,
+            showingclicked:false
 
         };
         
@@ -61,7 +62,7 @@ class Products extends Component {
     
     showingDetails(){
         this.setState({
-            clicked: !this.state.clicked
+            showingclicked: !this.state.showingclicked
         });
     }
     
@@ -127,7 +128,7 @@ class Products extends Component {
                         <div className="productPrice1">
                             Price: $50.00
                         </div>
-                    {this.state.clicked ?
+                    {this.state.showingclicked ?
                             <Details   
                                     closePopup={this.showingDetails.bind(this)}/>
                                         : null
