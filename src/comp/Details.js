@@ -17,6 +17,7 @@ class Details extends Component {
         this.orderPage = this.orderPage.bind(this);
         this.accountPage = this.accountPage.bind(this);
         this.searchPage = this.searchPage.bind(this);
+        this.addToCart = this.addToCart.bind(this);
     }
     
     homePage(){
@@ -54,6 +55,11 @@ class Details extends Component {
         
         var page = "Search";
         this.props.changePage(page);
+    }
+    addToCart(product){
+          console.log(product.inCartCount);
+          product.inCartCount++;
+          this.props.updateProduct(product);  
     }
     
    
@@ -130,7 +136,7 @@ class Details extends Component {
                     </table>
             <div id="quantity">
                 <input type="button" value="-" id="minus" onclick="minus()"/>
-                <input type="text" value="1" min="0" max="100" id="count"/>
+                <input type="text" value="1" min="0" max="1000" id="count"/>
                 <input type="button" value="+" id="plus" onclick="plus()"/>
             </div>
 
