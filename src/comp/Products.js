@@ -158,7 +158,13 @@ class Products extends Component {
                         </div>
                              
                     </div>
+
+
                 </div>
+                
+                <div> &copy; Bloom, all rights reserved </div>
+
+
                         
                 {this.state.clicked ?
                             <Chat   

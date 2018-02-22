@@ -112,6 +112,8 @@ class Landing extends Component {
                             }
                             
                              <button className="chatBut" onClick={this.showingChat.bind(this)}>Chat</button>
+
+            <div> &copy; Bloom, all rights reserved </div>
         
         </div>
     );
