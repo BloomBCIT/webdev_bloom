@@ -3,137 +3,6 @@ body{
     height:100%;
 }
 
-#allUsers{
-    position: absolute;
-    margin-left:10px;
-    width:30%;
-    background-color: white;
-    height:80%;
-    text-align: center;
-    margin: 0;
-    overflow:auto;
-    bottom:0;
-    
-}
-
-
-#allUsersP{
-    background-color: #fdf3f0;
-    
-}
-.usersP{
-    background-color: #fdf3f0;
-    font-size: 1em;
-}
-
-
-.xbutton{
-    position:absolute;
-}
-
-.joinChat, .send{
-    background-color: #ed7a5d;
-    -moz-border-radius:10px;
-	-webkit-border-radius: 10px;
-	border-radius:10px;
-    border-color: #ed7a5d;
-    font-size: 0.7em;
-    color: white;
-    width:30%;
-    height: 90%;
-    margin-top: 1%;
-}
-
-#chatBox{
-    height: 100%;
-}
-
-.chatDiv{
-    position:absolute;
-    width:65%;
-    height:80%;
-    text-align: center;
-    margin: 0;
-    float:right;
-    bottom: 0;
-    right:0;
-    
-}
-
-#configBox, #controls{
-    height:15%;
-    width:100%;
-    background-color: white;
-    text-align: center;
-    left:0;
-    position: absolute;
-    bottom:0;
-}
-
-.input0, .input1{
-    border-color: white;
-    width:60%;
-    height: 80%;
-    float: left;
-    position: relative;
-
-}
-
-#chatDisplay{
-    width:100%;
-    background-color: white;
-    float: right;
-    height: 85%;
-    position: relative;
-    overflow: auto;
-    margin-right: 5%;
-    
-}
-
-.wholeChat{
-    background-color: #f8f8f8;
-    position:absolute;
-    height: 50%;
-    width:50%;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    margin: auto; 
-     -moz-border-radius: 1%;
-	-webkit-border-radius: 1%;
-	border-radius: 1%;
-    overflow: scroll;
-    z-index: 99;
-}
-
-.chatBut{
-    font-size: 1em;
-    color:antiquewhite;
-    position: absolute;
-    bottom:5%;
-    right:5%;
-    height:60px;
-    width:60px;
-    margin: auto;
-    background-color: #ed7a5d;
-    border-color: #ed7a5d;
-    -moz-border-radius: 50px;
-	-webkit-border-radius: 50px;
-	border-radius: 50px;
-    text-align: center;
-    box-shadow: 0 0 10px #ffffff;     
-    
-}
-
-.chatBut:hover{
-    height:65px;
-    width:65px;
-    background-color: #ff997f;
-    border-color:  #ff997f;
-}
-
-
 .container{
     background-image: url(img/homebg.png);
     width:100%;
@@ -327,7 +196,8 @@ body{
 
 .aboutUs{
     width:100%;
-    position:static;
+    height:100%;
+    position:absolute;
     margin:auto;
     text-align: center;
 }
@@ -460,15 +330,9 @@ tr:hover {
 
 .detailContainer{
     background-color: white;
-    position:absolute;
-    height: 80%;
-    width:80%;
-    margin: auto;
-    top:0;
-    left:0;
-    right:0;
-    z-index: 99;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+    height: 100%;
+    width:100%;
 }
 
 .detailPhoto{

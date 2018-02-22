@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import '../App.css';
 import Products from '../comp/Products';
-import Chat from '../comp/Chat';
 
 class Landing extends Component {
     constructor(props){
         super(props);
         
         this.state={
-            clicked:false
 
         };
         
@@ -18,7 +16,6 @@ class Landing extends Component {
         this.orderPage = this.orderPage.bind(this);
         this.accountPage = this.accountPage.bind(this);
         this.searchPage = this.searchPage.bind(this);
-        this.showingChat = this.showingChat.bind(this);
     }
     
     homePage(){
@@ -57,12 +54,6 @@ class Landing extends Component {
         var page = "Search";
         this.props.changePage(page);
     }
-    
-    showingChat(){
-        this.setState({
-            clicked: !this.state.clicked
-    });
-    }
 
     
   render() {
@@ -85,8 +76,7 @@ class Landing extends Component {
                     <div className="navAbout" onClick={this.aboutPage}>
                         About
                     </div>
-        
-                    
+          
                         <div className="userInfo" onClick={this.accountPage}>
                             <img className="userImg" />
                         </div> 
@@ -103,17 +93,6 @@ class Landing extends Component {
             </div>
         
             <div className="shopnow" onClick={this.productPage}></div>
-        
-            {this.state.clicked ?
-                            <Chat   
-                                    closePopup={this.showingChat.bind(this)}
-                                        />
-                                        : null
-                            }
-                            
-                             <button className="chatBut" onClick={this.showingChat.bind(this)}>Chat</button>
-
-            <div> &copy; Bloom, all rights reserved </div>
         
         </div>
     );

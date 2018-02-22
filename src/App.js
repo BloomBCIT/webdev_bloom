@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Landing from './comp/Landing';
-import Chat from './comp/Chat';
 import Products from './comp/Products';
 import Orders from './comp/Orders';
 import About from './comp/About';
 import Checkout from './comp/Checkout';
 import Account from './comp/Account';
 import Search from './comp/Search';
+import Details from './comp/Details';
 
 class App extends Component {
     constructor(props){
@@ -51,8 +51,8 @@ class App extends Component {
       }else if(this.state.page == "Search"){
           comp = <Search changePage = {this.changePage} />
       
-      }else if(this.state.page == "Chat"){
-          comp = <Chat changePage = {this.changePage} />
+      }else if(this.state.page == "Details"){
+          comp = <Details changePage = {this.changePage} />
       
       }
     return (

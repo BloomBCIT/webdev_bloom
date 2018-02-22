@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import '../App.css';
 import Details from '../comp/Details';
-import Chat from '../comp/Chat';
 
 class Products extends Component {
     constructor(props){
         super(props);
         
         this.state={
-            clicked:false,
-            showingclicked:false
 
         };
         
@@ -19,8 +16,7 @@ class Products extends Component {
         this.orderPage = this.orderPage.bind(this);
         this.accountPage = this.accountPage.bind(this);
         this.searchPage = this.searchPage.bind(this);
-        this.showingDetails = this.showingDetails.bind(this);
-        this.showingChat = this.showingChat.bind(this);
+        this.detailPage = this.detailPage.bind(this);
     }
     
     homePage(){
@@ -59,18 +55,12 @@ class Products extends Component {
         this.props.changePage(page);
     }
     
-    
-    showingDetails(){
-        this.setState({
-            showingclicked: !this.state.showingclicked
-        });
+    detailPage(){
+        
+        var page = "Details";
+        this.props.changePage(page);
     }
     
-    showingChat(){
-        this.setState({
-            clicked: !this.state.clicked
-    });
-    }
     
     
   render() {
@@ -123,27 +113,22 @@ class Products extends Component {
                         <div className="productImg1">
                         </div>
                         <div className="productDetails1">
-                            Chrysanthemum flower tea
+                                Product1
                         </div>
                         <div className="productPrice1">
-                            Price: $50.00
+                            Price:
                         </div>
-                    {this.state.showingclicked ?
-                            <Details   
-                                    closePopup={this.showingDetails.bind(this)}/>
-                                        : null
-                            }
                             
-                             <button className="seeDetails" onClick={this.showingDetails.bind(this)}>Details</button>  
+                             <button className="seeDetails" onClick={this.detailPage}>Details</button>  
                         </div>     
                     <div className="listTwo">
                         <div className="productImg2">
                         </div>
                         <div className="productDetails2">
-                                Cockscomb flower tea
+                                Product2
                         </div>
                         <div className="productPrice1">
-                            Price: $50.00
+                            Price:
                         </div>
     
                     </div>
@@ -151,34 +136,16 @@ class Products extends Component {
                         <div className="productImg3">
                         </div>
                         <div className="productDetails3">
-                            Safflower flower tea
+                                Product3
                         </div>
                         <div className="productPrice1">
-                            Price: $50.00
+                            Price:
                         </div>
                              
                     </div>
-
-
                 </div>
-                
-                <div> &copy; Bloom, all rights reserved </div>
-
-
-                        
-                {this.state.clicked ?
-                            <Chat   
-                                    closePopup={this.showingChat.bind(this)}
-                                        />
-                                        : null
-                            }
-                            
-                             <button className="chatBut" onClick={this.showingChat.bind(this)}>Chat</button>
-        
             
             </div>
-        
-            
         
     );
   }
