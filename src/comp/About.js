@@ -18,6 +18,7 @@ class About extends Component {
         this.accountPage = this.accountPage.bind(this);
         this.searchPage = this.searchPage.bind(this);
         this.showingChat = this.showingChat.bind(this);
+        this.login = this.login.bind(this);
     }
     
     homePage(){
@@ -61,6 +62,11 @@ class About extends Component {
             clicked: !this.state.clicked
     });
     }
+
+    login(){
+        var page = "Login";
+        this.props.changePage(page);
+    }
     
   render() {
 
@@ -93,6 +99,9 @@ class About extends Component {
                         </div>
                         <div className="search" onClick={this.searchPage}>
                             <img className="searchImg" />
+                        </div>
+                        <div className="login" onClick={this.login}>
+                            Login
                         </div>
         
              

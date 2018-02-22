@@ -22,6 +22,7 @@ class Chat extends Component {
         this.handleUsername = this.handleUsername.bind(this);
         this.handleMyMsg = this.handleMyMsg.bind(this);
         this.sendChat = this.sendChat.bind(this);
+        
     
         
     }

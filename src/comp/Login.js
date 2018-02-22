@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import '../App.css';
-import Details from '../comp/Details';
 
-class Products extends Component {
-    constructor(props){
+
+
+class Account extends Component {
+   constructor(props){
         super(props);
         
         this.state={
@@ -14,9 +15,9 @@ class Products extends Component {
         this.productPage = this.productPage.bind(this);
         this.aboutPage = this.aboutPage.bind(this);
         this.orderPage = this.orderPage.bind(this);
+        this.checkOut = this.checkOut.bind(this);
         this.accountPage = this.accountPage.bind(this);
         this.searchPage = this.searchPage.bind(this);
-        this.detailPage = this.detailPage.bind(this);
         this.login = this.login.bind(this);
     }
     
@@ -44,6 +45,11 @@ class Products extends Component {
         this.props.changePage(page);
     }
     
+    checkOut(){
+        var page="Checkout";
+        this.props.changePage(page);
+    }
+    
     accountPage(){
         
         var page = "Account";
@@ -56,17 +62,10 @@ class Products extends Component {
         this.props.changePage(page);
     }
     
-    detailPage(){
-        
-        var page = "Details";
-        this.props.changePage(page);
-    }
     login(){
         var page = "Login";
         this.props.changePage(page);
     }
-    
-    
     
   render() {
       
@@ -100,6 +99,7 @@ class Products extends Component {
                         <div className="search" onClick={this.searchPage}>
                             <img className="searchImg" />
                         </div>
+        
                         <div className="login" onClick={this.login}>
                             Login
                         </div>
@@ -111,52 +111,15 @@ class Products extends Component {
      
             </div>
         
-            <div className="productBg">
-                <div className="productP">Product
+            <div className="accountBg">
+                <div className="accountP">Login Page
                 </div>
             </div>
-                <div className="productLists">
-                    <div className="listOne">
-                        <div className="productImg1">
-                        </div>
-                        <div className="productDetails1">
-                                Product1
-                        </div>
-                        <div className="productPrice1">
-                            Price:
-                        </div>
-                            
-                             <button className="seeDetails" onClick={this.detailPage}>Details</button>  
-                        </div>     
-                    <div className="listTwo">
-                        <div className="productImg2">
-                        </div>
-                        <div className="productDetails2">
-                                Product2
-                        </div>
-                        <div className="productPrice1">
-                            Price:
-                        </div>
-    
-                    </div>
-                    <div className="listThree">
-                        <div className="productImg3">
-                        </div>
-                        <div className="productDetails3">
-                                Product3
-                        </div>
-                        <div className="productPrice1">
-                            Price:
-                        </div>
-                             
-                    </div>
-                </div>
-            
+        
             </div>
         
     );
   }
 }
         
-        
-export default Products;
+export default Account;

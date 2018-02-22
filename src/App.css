@@ -34,10 +34,11 @@ body{
 }   
 
 
-.navHome, .navProduct, .navAbout, .userInfo, .cart, .search {
-    padding: 6%;
+.navHome, .navProduct, .navAbout, .userInfo, .cart, .search, .login {
+    padding: 4%;
     
 }
+
 
 .userImg{
     width:20px;

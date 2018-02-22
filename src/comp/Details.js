@@ -18,6 +18,7 @@ class Details extends Component {
         this.accountPage = this.accountPage.bind(this);
         this.searchPage = this.searchPage.bind(this);
         this.addToCart = this.addToCart.bind(this);
+        this.login = this.login.bind(this);
     }
     
     homePage(){
@@ -61,6 +62,10 @@ class Details extends Component {
           product.inCartCount++;
           this.props.updateProduct(product);  
     }
+    login(){
+        var page = "Login";
+        this.props.changePage(page);
+    }
     
    
   render() {
@@ -92,6 +97,9 @@ class Details extends Component {
                         </div>
                         <div className="search" onClick={this.searchPage}>
                             <img className="searchImg" />
+                        </div>
+                        <div className="login" onClick={this.login}>
+                            Login
                         </div>
         
                 </div>

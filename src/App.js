@@ -7,6 +7,7 @@ import Checkout from './comp/Checkout';
 import Account from './comp/Account';
 import Search from './comp/Search';
 import Details from './comp/Details';
+import Login from './comp/Login';
 
 class App extends Component {
     constructor(props){
@@ -54,6 +55,8 @@ class App extends Component {
       }else if(this.state.page == "Details"){
           comp = <Details changePage = {this.changePage} />
       
+      }else if(this.state.page == "Login"){
+          comp = <Login changePage = {this.changePage} />
       }
     return (
       <div className="App">

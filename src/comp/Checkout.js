@@ -20,7 +20,8 @@ class Checkout extends Component {
         this.checkOut = this.checkOut.bind(this);
         this.accountPage = this.accountPage.bind(this);
         this.searchPage = this.searchPage.bind(this);
-       this.showingChat = this.showingChat.bind(this);
+        this.showingChat = this.showingChat.bind(this);
+        this.login = this.login.bind(this);
     }
     
     homePage(){
@@ -63,12 +64,18 @@ class Checkout extends Component {
         var page = "Search";
         this.props.changePage(page);
     }
+    login(){
+        var page = "Login";
+        this.props.changePage(page);
+    }
+
     
     showingChat(){
         this.setState({
             clicked: !this.state.clicked
     });
     }
+
     
     
   render() {
@@ -102,6 +109,9 @@ class Checkout extends Component {
                         </div>
                         <div className="search" onClick={this.searchPage}>
                             <img className="searchImg" />
+                        </div>
+                        <div className="login" onClick={this.login}>
+                            Login
                         </div>
         
              
